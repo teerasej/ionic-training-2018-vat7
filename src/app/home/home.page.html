@@ -10,12 +10,12 @@
 
   <ion-item>
     <ion-label>จำนวนเงิน</ion-label>
-    <ion-input type="number" ></ion-input>
+    <ion-input type="number" [(ngModel)]="money"></ion-input>
   </ion-item>
 
-  <ion-button expand="block">คำนวน</ion-button>
+  <ion-button expand="block" (click)="calculate(money)">คำนวน</ion-button>
 
   <p class="vat-title">ราคารวม ภาษี 7%</p>
-  <p class="vat-amount">0</p>
+  <p class="vat-amount">{{ vatResult }}</p>
 </ion-content>
 
